@@ -20,8 +20,8 @@ class Request:
         self.method = request['method'] if 'method' in request else None
         self.url = request['url'] if 'url' in request else None
         if 'content' in request:
-            content = bytes(request['content'], "ascii")
-            self.content = base64.b64decode(content).decode('UTF-8')
+            #content = bytes(, "ascii")
+            self.content = base64.b64decode(request['content']).decode('UTF-8')
         else:
             self.content = None
         self.headers = request['headers'] if 'headers' in request else None
@@ -41,8 +41,7 @@ class Response:
         self.status = response['status'] if 'status' in response else None
         self.message = response['message'] if 'message' in response else None
         if 'content' in response:
-            content = bytes(response['content'], "ascii")
-            self.content = base64.b64decode(content).decode('UTF-8')
+            self.content = base64.b64decode(response['content']).decode('UTF-8')
         else:
             self.content = None
         self.headers = response['headers'] if 'headers' in response else None
