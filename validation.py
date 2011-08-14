@@ -2,7 +2,10 @@ __author__="ghermeto"
 __date__ ="$28/07/2011 19:13:12$"
 
 import re
-from urllib.parse import urlparse
+try:
+	from urllib.parse import urlparse 
+except ImportError:
+	from urlparse import urlparse
 
 def validate_url(url):
     parsed = urlparse(url)
