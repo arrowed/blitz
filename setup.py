@@ -15,11 +15,9 @@ setup(
     packages=find_packages(),
     test_suite='unittest',
     tests_require=['nose', 'fudge'],
-    install_requires=,
+    install_requires=[],
     entry_points={
-        
     },
     classifiers=[
-          
     ],
 )
