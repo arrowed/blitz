@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='blitz',
-    version=0.1.0,
+    version='0.1.0',
     description='Blitz is a web based performance stress testing tool',
     long_description="",
     author='Guilherme Hermeto',
